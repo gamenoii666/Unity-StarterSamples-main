@@ -8,7 +8,7 @@ public class MenuController : MonoBehaviour
     public void StartBtn()
     {
         Debug.Log("Game");
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("Inventory");
         
     }
 

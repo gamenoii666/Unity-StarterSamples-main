@@ -5,15 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/MainMenu.unity
     guid: 6faedd52296ba9342bbc38fb1a03787c
   - enabled: 1
-    path: Assets/Scene/MainGame.unity
-    guid: 65894f772c20d2c44bd6f589c3ca79f2
-  - enabled: 1
     path: Assets/Scene/Inventory.unity
     guid: 5cffb3b789d9782409c42f9d871f6549
+  - enabled: 1
+    path: Assets/Scene/MainGame.unity
+    guid: 65894f772c20d2c44bd6f589c3ca79f2
+  - enabled: 0
+    path: Assets/Scene/GameOver.unity
+    guid: 3dd58c9283593f24d8169bc11cbbfe32
   - enabled: 0
     path: Assets/Samples/Meta XR Interaction SDK OVR Samples/62.0.0/Example Scenes/SnapExamples.unity
     guid: 01ca63189b69e00488487d660224a315
