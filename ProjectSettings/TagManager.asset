@@ -10,6 +10,9 @@ TagManager:
   - MagneticObject
   - Connectable.
   - Snapinteraction
+  - snappoint
+  - parentblock
+  - Part
   layers:
   - Default
   - TransparentFX

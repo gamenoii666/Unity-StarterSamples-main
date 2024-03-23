@@ -4,13 +4,56 @@ using UnityEngine;
 
 public class Snap : MonoBehaviour
 {
+    public GameManager gameManager;
+    [SerializeField]
+    private string _NamePartSnap;
+
+    public bool isSnap = false;
+    public bool isPartCorrect = false;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log ("checkTrigger");
-        if (other.gameObject.CompareTag("Snapinteraction"))
+        if (other.gameObject.CompareTag("Part"))
         {
-            Debug.Log("checkComparetag");
-            other.transform.position = transform.position;
+
+            other.gameObject.transform.position = transform.position;
+            other.gameObject.transform.rotation = transform.rotation;
+
+            if (other.gameObject.name == _NamePartSnap)
+            {
+                isPartCorrect = true;
+            }
+            if (!isSnap)
+            {
+                isSnap = true;
+                gameManager.snapCheck();
+
+            }
+
         }
     }
+
+
+    private void OnTriggerExit(Collider other)
+    {
+
+        if (other.gameObject.CompareTag("Part"))
+        {
+            isSnap = false;
+            isPartCorrect = false;
+
+        }
+    }
+
 }
